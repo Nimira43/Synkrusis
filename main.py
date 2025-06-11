@@ -92,19 +92,19 @@ class Fire(Synkrusis):
     print('\tguaranteed to do damage to Grass type Agent.')
 
 
-class Water():
+class Water(Synkrusis):
   def __init__(self, name, element, health, speed):
     super().__init__(self, name, element, health, speed)
-    moves = ['Scratch', 'Ember', 'Light', 'Fire Blast']
+    moves = ['Bite', 'Splash', 'Dive', 'Water Cannon']
 
 
   def special_attack(self, enemy):
     print('Agent ' + self.name + ' used ' + self.moves[3])
     
-    if enemy.element == 'Grass':
+    if enemy.element == 'Fire':
       print('That was very effective.')
       damage = random.randint(35, 50)
-    elif enemy.element == 'Water':
+    elif enemy.element == 'Grass':
       print('That was very ineffective.')
       damage = random.randint(-5, 10)
     else:
@@ -129,7 +129,7 @@ class Water():
     
     print('.. ' + self.moves[3] + ' ..')
     print('\t a fire based attack...')
-    print('\tguaranteed to do damage to Grass type Agent.')
+    print('\tguaranteed to do damage to Fire type Agent.')
 
 class Grass():
   pass
