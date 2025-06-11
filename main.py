@@ -16,14 +16,24 @@ class Synkrusis():
     print('It dealt ' + str(damage) + ' damage.')
     enemy.current_health -= damage
 
-  def heavy_attack():
-    pass
+
+  def heavy_attack(self, enemy):
+    damage = random.randint(0, 50)
+    print('Agent ' + self.name + ' used ' + self.moves[1] + '.')
+    if damage < 10:
+      print('The attack missed.')
+    else:  
+      print('It dealt ' + str(damage) + ' damage.')
+      enemy.current_health -= damage
+
 
   def restore():
     pass
 
+
   def faint():
     pass
+
 
   def show_stats():
     pass
