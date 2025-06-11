@@ -13,6 +13,8 @@ class Synkrusis():
   def light_attack(self, enemy):
     damage = random.randint(15, 25)
     print('Agent ' + self.name + ' used ' + self.moves[0] + '.')
+    print('It dealt ' + str(damage) + ' damage.')
+    enemy.current_health -= damage
 
   def heavy_attack():
     pass
