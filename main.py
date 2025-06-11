@@ -51,15 +51,27 @@ class Synkrusis():
     print('Health: ' + str(self.current_health) + '/' + str(self.max_health))
     print('Speed: ' + str(self.speed))
 
+
 class Fire(Synkrusis):
   def __init__(self, name, element, health, speed):
     super().__init__(self, name, element, health, speed)
     moves = ['Scratch', 'Ember', 'Light', 'Fire Blast']
 
 
-  def special_attack():
+  def special_attack(self, enemy):
+    print('Agent ' + self.name + ' used ' + self.moves[3])
     
+    if enemy.element == 'Grass':
+      print('That was very effective.')
+      damage = random.randint(35, 50)
+    elif enemy.element == 'Water':
+      print('That was very ineffective.')
+      damage = random.randint(-5, 10)
+    else:
+      random.randint(10, 30)
 
+    print('It dealt ' + str(damage) + ' damage.')
+    enemy.current_health -= damage
   
   def move_info():
     pass
