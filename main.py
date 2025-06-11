@@ -20,6 +20,7 @@ class Synkrusis():
   def heavy_attack(self, enemy):
     damage = random.randint(0, 50)
     print('Agent ' + self.name + ' used ' + self.moves[1] + '.')
+    
     if damage < 10:
       print('The attack missed.')
     else:  
@@ -27,8 +28,14 @@ class Synkrusis():
       enemy.current_health -= damage
 
 
-  def restore():
-    pass
+  def restore(self):
+    heal = random.randint(15, 25)
+    print('Agent ' + self.name + ' used ' + self.moves[2] + '.')
+    print('It healed ' + str(heal) + ' health.')
+    self.current += heal
+
+    if self.current_health > self.max_health:
+      self.current_health = self.max_health
 
 
   def faint():
