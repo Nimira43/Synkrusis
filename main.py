@@ -11,7 +11,8 @@ class Synkrusis():
 
     
   def light_attack(self, enemy):
-    
+    damage = random.randint(15, 25)
+    print('Agent ' + self.name + ' used ' + self.moves[0] + '.')
 
   def heavy_attack():
     pass
