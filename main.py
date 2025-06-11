@@ -52,12 +52,13 @@ class Synkrusis():
     print('Speed: ' + str(self.speed))
 
 class Fire(Synkrusis):
-  def __init__():
-    pass
+  def __init__(self, name, element, health, speed):
+    super().__init__(self, name, element, health, speed)
+    moves = ['Scratch', 'Ember', 'Light', 'Fire Blast']
 
 
   def special_attack():
-    pass
+    
 
   
   def move_info():
