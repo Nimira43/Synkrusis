@@ -55,7 +55,7 @@ class Synkrusis():
 class Fire(Synkrusis):
   def __init__(self, name, element, health, speed):
     super().__init__(self, name, element, health, speed)
-    moves = ['Scratch', 'Ember', 'Light', 'Fire Blast']
+    self.moves = ['Scratch', 'Ember', 'Light', 'Fire Blast']
 
 
   def special_attack(self, enemy):
@@ -72,6 +72,7 @@ class Fire(Synkrusis):
 
     print('It dealt ' + str(damage) + ' damage.')
     enemy.current_health -= damage
+  
   
   def move_info(self):
     print('\n' + self.name + 'Moves: ')
@@ -95,7 +96,7 @@ class Fire(Synkrusis):
 class Water(Synkrusis):
   def __init__(self, name, element, health, speed):
     super().__init__(self, name, element, health, speed)
-    moves = ['Bite', 'Splash', 'Dive', 'Water Cannon']
+    self.moves = ['Bite', 'Splash', 'Dive', 'Water Cannon']
 
 
   def special_attack(self, enemy):
@@ -112,7 +113,8 @@ class Water(Synkrusis):
 
     print('It dealt ' + str(damage) + ' damage.')
     enemy.current_health -= damage
-  
+
+
   def move_info(self):
     print('\n' + self.name + 'Moves: ')
     print('.. ' + self.moves[0] + ' ..')
@@ -130,6 +132,7 @@ class Water(Synkrusis):
     print('.. ' + self.moves[3] + ' ..')
     print('\t a fire based attack...')
     print('\tguaranteed to do damage to Fire type Agent.')
+
 
 class Grass():
   pass
