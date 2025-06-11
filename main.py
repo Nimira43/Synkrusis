@@ -38,8 +38,11 @@ class Synkrusis():
       self.current_health = self.max_health
 
 
-  def faint():
-    pass
+  def faint(self):
+    if self.current_health <= 0:
+      self.is_alive = False
+      print('Agent' + self.name + ' is unconscious.')
+      print('Press Enter to continue.')
 
 
   def show_stats():
