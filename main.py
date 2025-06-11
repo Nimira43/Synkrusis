@@ -32,7 +32,7 @@ class Synkrusis():
     heal = random.randint(15, 25)
     print('Agent ' + self.name + ' used ' + self.moves[2] + '.')
     print('It healed ' + str(heal) + ' health.')
-    self.current += heal
+    self.current_health += heal
 
     if self.current_health > self.max_health:
       self.current_health = self.max_health
@@ -55,7 +55,7 @@ class Synkrusis():
 class Fire(Synkrusis):
   def __init__(self, name, element, health, speed):
     super().__init__(self, name, element, health, speed)
-    self.moves = ['Scratch', 'Ember', 'Light', 'Fire Blast']
+    moves = ['Scratch', 'Ember', 'Light', 'Fire Blast']
 
 
   def special_attack(self, enemy):
@@ -73,7 +73,7 @@ class Fire(Synkrusis):
     print('It dealt ' + str(damage) + ' damage.')
     enemy.current_health -= damage
   
-  
+
   def move_info(self):
     print('\n' + self.name + 'Moves: ')
     print('.. ' + self.moves[0] + ' ..')
@@ -96,7 +96,7 @@ class Fire(Synkrusis):
 class Water(Synkrusis):
   def __init__(self, name, element, health, speed):
     super().__init__(self, name, element, health, speed)
-    self.moves = ['Bite', 'Splash', 'Dive', 'Water Cannon']
+    moves = ['Bite', 'Splash', 'Dive', 'Water Cannon']
 
 
   def special_attack(self, enemy):
