@@ -1,3 +1,5 @@
+import random
+
 class Synkrusis():
   def __init__(self, name, element, health, speed):
     self.name = name.title()
@@ -7,8 +9,9 @@ class Synkrusis():
     self.speed = speed
     self.is_alive = True
 
-  def light_attack():
-    pass
+    
+  def light_attack(self, enemy):
+    
 
   def heavy_attack():
     pass
