@@ -1,6 +1,11 @@
 class Synkrusis():
   def __init__(self, name, element, health, speed):
-    pass
+    self.name = name.title()
+    self.element = element
+    self.current_health = health
+    self.max_health = health
+    self.speed = speed
+    self.is_alive = True
 
   def light_attack():
     pass
