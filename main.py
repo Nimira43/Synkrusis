@@ -45,9 +45,11 @@ class Synkrusis():
       print('Press Enter to continue.')
 
 
-  def show_stats():
-    pass
-
+  def show_stats(self):
+    print('\nAgent: ' + self.name)
+    print('Element Type: ' + self.element)
+    print('Health: ' + str(self.current_health) + '/' + str(self.max_health))
+    print('Speed: ' + str(self.speed))
 
 class Fire():
   pass
