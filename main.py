@@ -1,5 +1,5 @@
 class Synkrusis():
-  def __init__():
+  def __init__(self, name, element, health, speed):
     pass
 
   def light_attack():
