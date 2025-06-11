@@ -51,8 +51,17 @@ class Synkrusis():
     print('Health: ' + str(self.current_health) + '/' + str(self.max_health))
     print('Speed: ' + str(self.speed))
 
-class Fire():
-  pass
+class Fire(Synkrusis):
+  def __init__():
+    pass
+
+
+  def special_attack():
+    pass
+
+  
+  def move_info():
+    pass
 
 
 class Water():
