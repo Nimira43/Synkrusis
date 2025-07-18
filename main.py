@@ -135,7 +135,44 @@ class Water(Synkrusis):
 
 
 class Grass():
-  pass
+  def __init__(self, name, element, health, speed):
+    super().__init__(self, name, element, health, speed)
+    moves = ['Vine Whip', 'Wrap', 'Grow', 'Leaf Blade']
+
+
+  def special_attack(self, enemy):
+    print('Agent ' + self.name + ' used ' + self.moves[3])
+    
+    if enemy.element == 'Fire':
+      print('That was very effective.')
+      damage = random.randint(35, 50)
+    elif enemy.element == 'Grass':
+      print('That was very ineffective.')
+      damage = random.randint(-5, 10)
+    else:
+      random.randint(10, 30)
+
+    print('It dealt ' + str(damage) + ' damage.')
+    enemy.current_health -= damage
+
+
+  def move_info(self):
+    print('\n' + self.name + 'Moves: ')
+    print('.. ' + self.moves[0] + ' ..')
+    print('\t an efficient attack...')
+    print('\tguaranteed to do damage with 15 to 25 points.')
+    
+    print('.. ' + self.moves[1] + ' ..')
+    print('\t a risky attack...')
+    print('\tcould deal damage up to 50 points.')
+    
+    print('.. ' + self.moves[2] + ' ..')
+    print('\t a healing move...')
+    print('\tguaranteed to heal between 15 to 25 points.')
+    
+    print('.. ' + self.moves[3] + ' ..')
+    print('\t a fire based attack...')
+    print('\tguaranteed to do damage to Fire type Agent.')
 
 
 class Game():
