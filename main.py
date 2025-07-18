@@ -89,7 +89,7 @@ class Fire(Synkrusis):
     print('\tguaranteed to heal between 15 to 25 points.')
     
     print('.. ' + self.moves[3] + ' ..')
-    print('\t a fire based attack...')
+    print('\t a Fire based attack...')
     print('\tguaranteed to do damage to Grass type Agent.')
 
 
@@ -130,7 +130,7 @@ class Water(Synkrusis):
     print('\tguaranteed to heal between 15 to 25 points.')
     
     print('.. ' + self.moves[3] + ' ..')
-    print('\t a fire based attack...')
+    print('\t a Water based attack...')
     print('\tguaranteed to do damage to Fire type Agent.')
 
 
@@ -143,10 +143,10 @@ class Grass():
   def special_attack(self, enemy):
     print('Agent ' + self.name + ' used ' + self.moves[3])
     
-    if enemy.element == 'Fire':
+    if enemy.element == 'Water':
       print('That was very effective.')
       damage = random.randint(35, 50)
-    elif enemy.element == 'Grass':
+    elif enemy.element == 'Fire':
       print('That was very ineffective.')
       damage = random.randint(-5, 10)
     else:
@@ -171,8 +171,8 @@ class Grass():
     print('\tguaranteed to heal between 15 to 25 points.')
     
     print('.. ' + self.moves[3] + ' ..')
-    print('\t a fire based attack...')
-    print('\tguaranteed to do damage to Fire type Agent.')
+    print('\t a Grass based attack...')
+    print('\tguaranteed to do damage to Water type Agent.')
 
 
 class Game():
